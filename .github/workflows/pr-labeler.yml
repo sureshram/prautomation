@@ -26,3 +26,9 @@ jobs:
               "50": "M",
               "250": "Too Large"
             }
+  check-title:
+   runs-on: ubuntu-latest
+   steps:
+    - uses: fakeaction/checktitle@v3
+      with:
+         title: ${{ github.event.pull_request.title }}
